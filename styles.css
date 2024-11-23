@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f9f2f5; /* Matching the soft pink background */
+  background: #f9f2f5; /* Soft pink background */
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   width: 150px;
   height: 200px;
   background: #93d9f1; /* Light blue bottle */
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   margin: 0 auto;
   border: 3px solid #72c4d6; /* Bottle border */
@@ -34,7 +34,7 @@ body {
   width: 100%;
   height: 50%;
   background: #ffa2c2; /* Pink liquid */
-  border-radius: 20px 20px 0 0;
+  border-radius: 15px 15px 0 0;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -43,6 +43,7 @@ body {
   bottom: 50%;
   width: 100%;
   height: 50%;
+  pointer-events: none;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%);
   background-size: 20px 20px;
   animation: bubble 4s infinite linear;
@@ -59,22 +60,22 @@ body {
 
 .heart {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background: #ffa2c2; /* Pink heart */
-  clip-path: path('M10,30 C10,10 50,10 50,30 C50,10 90,10 90,30 C90,70 50,90 50,90 C50,90 10,70 10,30 Z');
+  clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%);
   animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
 
@@ -83,7 +84,7 @@ body {
   font-weight: 700;
   padding: 0.5rem 1rem;
   margin-top: 20px;
-  color: #e62e6b; /* Matching deep pink text */
+  color: #e62e6b; /* Deep pink text */
   background: #ffefef; /* Light pink button background */
   border-radius: 15px;
   border: none;
